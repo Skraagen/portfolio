@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '@includes/footer'
+import HeroFigure from '@includes/fig'
 import styles from '../styles/front.module.css'
 import DefaultLayout from '@layouts/default'
 import Link from 'next/link'
@@ -35,8 +36,7 @@ export default function Home(props) {
           </ul>
         </div>
         <div className={styles.hero_inner}>
-          <img className={styles.logo} src="/logo.png" />
-          <img className={styles.hero_figure} src={'/hero-figure.png'} />
+            <HeroFigure></HeroFigure>
         </div>
       </section>
 

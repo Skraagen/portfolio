@@ -85,6 +85,14 @@
   }
 }
 
+.hero_nav, .hero_inner {
+  justify-content: center;
+  display: flex;
+}
+.hero_nav li {
+  padding: 20px 25px;
+}
+
 .work {
   width: 100%;
   background: #181818;
