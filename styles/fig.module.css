@@ -9,8 +9,8 @@
   background-repeat: no-repeat;
   will-change: transform;
   background-size: contain;
-  height: 40ch!important;
-  width: 40ch!important;
+  height: 30vw!important;
+  width: 30vw!important;
 }
 
 .fig1 {
@@ -47,9 +47,10 @@
 
 .logo {
   background-image: url("/logo.png");
-  width: 24ch;
-  height: 20.1ch;
+  width: 18vw;
+  height: 14vw;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .container {

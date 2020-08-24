@@ -16,18 +16,22 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: #222;
-  /* background-image: url('/hero-bg.png'); */
+  background: #181818;
+  //background-image: url('/hero-bg.png');
   background-size: cover;
 }
 
 .hero_nav {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 45px;
   text-align: right;
   position: absolute;
   max-width: 1160px;
-  width: 100%;
+  transition: 0.3s all ease;
+}
+
+.hero_nav:hover {
+  transform: translate(0, 5px);
 }
 
 .hero_nav ul {
@@ -57,7 +61,7 @@
 
 .hero_inner {
   height: 100vh;
-  width: 1160px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +95,27 @@
 }
 .hero_nav li {
   padding: 20px 25px;
+}
+
+.hero_description {
+  position: absolute;
+  color: #ffffff;
+  text-align: center;
+  bottom: 0;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s all ease;
+}
+
+.hero_description img {
+  width: 40px;
+}
+
+.hero_description:hover {
+  transform: translate(0, -10px);
+  cursor: pointer;
 }
 
 .work {
@@ -227,7 +252,7 @@
   height: 350px;
   display: flex;
   align-items: flex-end;
-  transition: transform .3s ease-out;
+  transition: transform .2s ease-out;
 }
 
 @media (max-width: 800px) {
@@ -239,7 +264,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  transform: translate(0, -5px);
+  transform: translate(0, -7px);
 }
 
 .card h3 {
@@ -273,4 +298,36 @@
   .hero_nav {
     display: none;
   }
+}
+
+.button__icon {
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 800;
+  font-family: Raleway;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  width: fit-content;
+  padding: 20px 36px 25px;
+  border: 2px solid #ffffff;
+  margin-top: 30px;
+  transition: transform .2s ease-out;
+}
+
+.button__icon img {
+  width: 25px;
+  margin-bottom: -7px;
+  margin-left: 20px;
+  transition: all .2s ease-out;
+}
+
+.button__icon:hover {
+  cursor: pointer;
+}
+
+.button__icon:hover img {
+  transform: translate(2px, 0);
+  margin-left: 30px;
 }

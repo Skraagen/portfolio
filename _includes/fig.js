@@ -4,10 +4,10 @@ import { useSpring, animated } from 'react-spring'
 import figstyle from '../styles/fig.module.css'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 12 + 200}px,${y / 12}px,0)`
+const trans1 = (x, y) => `translate3d(${x / 12 + 200}px,${y / 13}px,0)`
 const trans2 = (x, y) => `translate3d(${x / 10 + 200}px,${y / 10}px,0)`
-const trans3 = (x, y) => `translate3d(${x / 8 + 200}px,${y / 8}px,0)`
-const trans4 = (x, y) => `translate3d(${x / 9 + 200}px,${y / 9}px,0)`
+const trans3 = (x, y) => `translate3d(${x / 8 + 200}px,${y / 7}px,0)`
+const trans4 = (x, y) => `translate3d(${x / 10 + 200}px,${y / 10}px,0)`
 const trans5 = (x, y) => `translate3d(${x / 10 - 200}px,${y / 10}px,0)`
 
 export default function Card() {
@@ -19,7 +19,7 @@ export default function Card() {
       <animated.div className={figstyle.fig5} style={{ transform: props.xy.interpolate(trans4) }} />
       <animated.div className={figstyle.fig3} style={{ transform: props.xy.interpolate(trans3) }} />
       <animated.div className={figstyle.fig4} style={{ transform: props.xy.interpolate(trans4) }} />
-      <animated.div className={figstyle.logo} style={{ transform: props.xy.interpolate(trans5) }} />
+      <animated.a href="#" className={figstyle.logo} style={{ transform: props.xy.interpolate(trans5) }} />
     </div>
   )
 }
