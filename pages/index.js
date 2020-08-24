@@ -36,6 +36,7 @@ export default function Home(props) {
         </div>
         <div className={styles.hero_inner}>
           <img className={styles.logo} src="/logo.png" />
+          <img className={styles.hero_figure} src={'/hero-figure.png'} />
         </div>
       </section>
 

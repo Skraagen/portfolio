@@ -16,8 +16,8 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: #52566e;
-  background-image: url('/hero-bg.png');
+  background: #222;
+  /* background-image: url('/hero-bg.png'); */
   background-size: cover;
 }
 
@@ -60,20 +60,18 @@
   width: 1160px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hero_figure {
-  width: 100%;
-  margin-top: 280px;
-}
-
-.hero_figure img {
-  float: right;
-  width: 600px;
+  width: 464px;
+  margin-top: 27px;
+  margin-left: 70px;
 }
 
 .hero_inner .logo {
   width: 250px;
+  margin-left: 87px;
 }
 
 
@@ -89,13 +87,13 @@
 
 .work {
   width: 100%;
-  background: #262731;
+  background: #181818;
   padding: 90px 0;
 }
 
 .about {
   width: 100%;
-  background: #15151c;
+  background: #181818;
   padding: 90px 0;
 }
 
@@ -130,7 +128,7 @@
 
 .contact {
   width: 100%;
-  background: #15151c;
+  background: #181818;
   padding: 90px 0;
 }
 
@@ -183,7 +181,7 @@
 .description {
   line-height: 1.5;
   font-size: 1.2rem;
-  color: #93b7d6;
+  color: #b5b5b5;
   font-weight: 500;
 }
 
