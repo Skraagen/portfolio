@@ -24,6 +24,10 @@ footer {
   font-size: 1rem;
 }
 
+footer img {
+  width: 100px;
+}
+
 
 
 /*---------------------------------------------*/
@@ -121,9 +125,13 @@ iframe {
 
 .label_input {
   font-size: 15px;
-  color: #bbbbbb;
   line-height: 1.5;
   padding-left: 5px;
+  color: #afafaf;
+  font-weight: 800;
+  font-family: Raleway;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .input {
@@ -134,33 +142,11 @@ iframe {
   color: #EEEEEE;
   line-height: 1.2;
   padding: 0 5px;
+  font-weight: 500;
 }
 
-.focus_input {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.focus_input::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-
-  background: #83b0d6;
+.input:focus + .label_input {
+  background: red!important;
 }
 
 input.input {
@@ -181,14 +167,6 @@ textarea.input {
   color: #ffffff!important;
   -webkit-text-fill-color: #f5fff5;
   transition: background-color 5000s ease-in-out 0s;
-}
-
-.input:focus + .focus_input::before {
-  width: 100%;
-}
-
-.has-val.input + .focus_input::before {
-  width: 100%;
 }
 
 .container_contact_form_btn {
