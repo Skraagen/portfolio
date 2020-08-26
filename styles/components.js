@@ -54,7 +54,6 @@ export const BackButton = styled(Button) `
   }
 `
 
-
 export const Card = styled.div `
   margin: 1rem;
   padding: 1.5rem;
@@ -70,6 +69,13 @@ export const Card = styled.div `
   transition: transform .2s ease-out;
   display: flex;
   align-items: flex-end;
+
+  @media ${({ theme }) => theme.bp.xs} {
+    height: 160px;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
 
   &:hover {
     cursor: pointer;

@@ -9,7 +9,7 @@ export const Container = styled.div `
   align-items: ${props => props.center ? "center" : "unset"};
 
   @media ${({ theme }) => theme.bp.lg} {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 `
 
@@ -28,8 +28,12 @@ export const Grid = styled.div `
 export const Column = styled.div `
   flex-basis: ${props => props.small ? "25%" : "48%"};
 
-  @media ${({ theme }) => theme.bp.xs} {
-    flex-basis: 100%;
+  @media ${({ theme }) => theme.bp.md} {
+    flex-basis: ${props => props.small ? "33.3333%" : "48%"};
+  }
+
+  @media ${({ theme }) => theme.bp.sm} {
+    flex-basis: 50%;
   }
 `
 
