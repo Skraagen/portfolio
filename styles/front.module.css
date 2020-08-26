@@ -101,18 +101,6 @@
   cursor: pointer;
 }
 
-#work {
-  width: 100%;
-  background: #181818;
-  padding: 90px 0;
-}
-
-#about {
-  width: 100%;
-  background: #181818;
-  padding: 90px 0;
-}
-
 .about_text {
   width: 40rem;
 }

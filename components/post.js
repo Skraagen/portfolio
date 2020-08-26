@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Router from 'next/router'
 import Footer from '@components/footer'
+import PostNav from '@components/post_nav'
 import { Container, Section } from '@styles/layout'
 import { Title, Paragraph } from '@styles/content'
-import { Button } from '@styles/components'
+import { BackButton } from '@styles/components'
 
 export default function PostLayout(props){
   return (
@@ -11,18 +13,16 @@ export default function PostLayout(props){
     <Head>
       <title>{props.title}</title>
     </Head>
-    <Container>
-      <Section>
+    <Section>
+      <Container>
         <Title>{props.title}</Title>
-        <img style={{width: "100%"}} src={props.image} />
+        <img style={{height: "350px"}} src={props.image} />
         <Paragraph>
           <div dangerouslySetInnerHTML={{__html:props.content}}/>
-          </Paragraph>
-        <div><Link href='/'><Button>Home</Button></Link></div>
-      </Section>
-    </Container>
-    <Footer>
-    </Footer>
+        </Paragraph>
+      </Container>
+    </Section>
+    <PostNav type="post" />
   </>
   )
 }

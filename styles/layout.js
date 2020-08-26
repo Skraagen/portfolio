@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
-  max-width: 1160px;
+  max-width: 1360px;
   padding: 0;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  align-items: ${props => props.center ? "center" : "unset"};
 
   @media ${({ theme }) => theme.bp.lg} {
     padding: 0 40px;
@@ -14,8 +15,8 @@ export const Container = styled.div `
 
 export const Grid = styled.div `
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: ${props => props.left ? "end" : "center"};
+  justify-content: ${props => props.left ? "end" : "center"};
   flex-wrap: wrap;
   margin-top: 3rem;
 
@@ -25,7 +26,7 @@ export const Grid = styled.div `
 `
 
 export const Column = styled.div `
-  flex-basis: 48%;
+  flex-basis: ${props => props.small ? "25%" : "48%"};
 
   @media ${({ theme }) => theme.bp.xs} {
     flex-basis: 100%;

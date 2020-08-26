@@ -2,19 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useSpring, animated } from 'react-spring'
 import figstyle from '../styles/fig.module.css'
-
-if (typeof window !== "undefined") {
-  var align = window.innerWidth / 7.5;
-}
-
-const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 12 + align}px,${y / 13}px,0)`
-const trans2 = (x, y) => `translate3d(${x / 10 + align}px,${y / 10}px,0)`
-const trans3 = (x, y) => `translate3d(${x / 8 + align}px,${y / 7}px,0)`
-const trans4 = (x, y) => `translate3d(${x / 10 + align}px,${y / 10}px,0)`
-const trans5 = (x, y) => `translate3d(${x / 10 - align}px,${y / 10}px,0)`
+import useWindowSize from "@api/window"
 
 export default function Card() {
+  const {windowWidth} = useWindowSize();
+  const align = windowWidth / 7.5;
+  const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
+  const trans1 = (x, y) => `translate3d(${x / 14 + align}px,${y / 14}px,0)`
+  const trans2 = (x, y) => `translate3d(${x / 10 + align}px,${y / 10}px,0)`
+  const trans3 = (x, y) => `translate3d(${x / 8 + align}px,${y / 7}px,0)`
+  const trans4 = (x, y) => `translate3d(${x / 10 + align}px,${y / 10}px,0)`
+  const trans5 = (x, y) => `translate3d(${x / 10 - align}px,${y / 10}px,0)`
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   return (
     <div className={figstyle.container} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>

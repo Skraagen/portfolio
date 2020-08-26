@@ -23,7 +23,7 @@ const theme = {
   bp: {
     xs: "(max-width: 600px)",
     sm: "(max-width: 800px)",
-    lg: "(max-width: 1240px)",
+    lg: "(max-width: 1460px)",
     tablet: "(max-width: ${size.tablet})",
   }
 }

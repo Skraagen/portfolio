@@ -1,5 +1,5 @@
 import PostLayout from '@components/post'
-import { getPostBySlug, getAllPosts } from "@api"
+import { getPostBySlug, getAllPosts } from "@api/index"
 
 export default function Post(props){
     return <PostLayout title={props.title} image={props.image} content={props.content}/>

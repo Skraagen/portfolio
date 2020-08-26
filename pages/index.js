@@ -5,10 +5,14 @@ import FeaturedPosts from '@components/featured'
 import ContactForm from '@components/contact_form'
 import styles from '@styles/front.module.css'
 import Link from 'next/link'
-import { Button, Card } from '@styles/components'
+import { ForwardButton, Card } from '@styles/components'
 import { Title, Paragraph } from '@styles/content'
 import { Container, Column, Grid, Section } from '@styles/layout'
-import { getConfig, getFeaturedPosts } from '@api'
+import { getConfig, getFeaturedPosts } from '@api/index'
+import * as React from "react";
+import { useState, useRef, useLayoutEffect } from "react";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+import useWindowSize from "@api/window"
 
 
 const sections = [{id: 'home', title: 'Home'}, {id: 'portfolio', title: 'Portfolio'}, {id:'about', title: 'About me'}, {id:'contact', title: 'Contact'}];
@@ -24,7 +28,29 @@ const handleClick = id =>
     block: 'start',
   });
 
+const width = 0;
+
 export default function Home(props) {
+  const {windowHeight} = useWindowSize();
+
+  const ParallaxTitle = ({ src, }, prop) => {
+    const { scrollY } = useViewportScroll();
+
+    const yRange = [0, windowHeight, windowHeight, windowHeight*2]
+    const transformRange = [-100, 0, 0, 0]
+    const x = useTransform(scrollY, yRange, transformRange)
+
+
+    return (
+      <div>
+        <motion.div style={{ x }}>
+          <Title>Some of my work</Title>
+          <Paragraph>I'm a graphics designer and front-end developer.</Paragraph>
+        </motion.div>
+      </div>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -49,10 +75,9 @@ export default function Home(props) {
         </a>
       </Section>
 
-      <Section key="portfolio" ref={refs['portfolio']} id={styles.work}>
+      <Section key="portfolio" ref={refs['portfolio']} id="fromPosts">
         <Container>
-          <Title>My work</Title>
-          <Paragraph>I create a large variety of brand designs, <br/>with additional competence in front-end webdesign.</Paragraph>
+          <ParallaxTitle/>
           <FeaturedPosts>
             {props.posts.map(function(post, idx){
               return (
@@ -69,13 +94,13 @@ export default function Home(props) {
         </Container>
       </Section>
 
-      <Section key="about" ref={refs['about']} id={styles.about}>
+      <Section key="about" ref={refs['about']}>
         <Container>
           <Grid>
             <div className={styles.about_text}>
-              <Title>About me</Title>
+              <ParallaxTitle/>
               <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non fringilla mauris. Aliquam dapibus mauris eget lacus iaculis commodo vitae ut lorem. Donec posuere porttitor diam, pretium consequat lectus lobortis a. Donec pharetra nibh at feugiat vulputate. Nulla scelerisque ipsum quis ipsum blandit vulputate.</Paragraph>
-              <Button>My Story</Button>
+              <ForwardButton>My Story</ForwardButton>
             </div>
             <div className={styles.about_img}>
               <img src={'/profile.png'} />
@@ -84,10 +109,9 @@ export default function Home(props) {
         </Container>
       </Section>
 
-      <Section key="contact" ref={refs['contact']} className={styles.contact}>
+      <Section key="contact" ref={refs['contact']}>
         <Container>
           <Grid>
-            <Title>Contact</Title>
             <ContactForm />
           </Grid>
         </Container>

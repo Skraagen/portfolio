@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from '../styles/components.js'
+import { ForwardButton } from '../styles/components.js'
 import { Grid } from '../styles/layout.js'
 
 export default function FeaturedPosts(props) {
@@ -8,7 +8,7 @@ export default function FeaturedPosts(props) {
       <Grid>
         {props.children}
         <Link href={"posts"}>
-          <Button>View more</Button>
+          <ForwardButton>View more</ForwardButton>
         </Link>
       </Grid>
     </>

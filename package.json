@@ -10,6 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "framer": "^1.2.5",
+    "framer-motion": "^2.6.1",
     "gray-matter": "^4.0.2",
     "js-yaml": "^3.13.1",
     "marked": "^0.8.2",

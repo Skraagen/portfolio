@@ -29,8 +29,6 @@ footer img {
 }
 
 
-
-/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -81,7 +79,6 @@ textarea:-ms-input-placeholder {
   color: #555555;
 }
 
-/*---------------------------------------------*/
 button {
 	outline: none !important;
 	border: none;
@@ -94,124 +91,4 @@ button:hover {
 
 iframe {
 	border: none !important;
-}
-
-.contact_form {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 30px;
-  margin-top: 60px;
-  font-weight: 500;
-}
-
-.wrap_input {
-  width: 100%;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 35px;
-}
-
-.rs1_wrap_input {
-  width: calc((100% - 30px) / 2);
-}
-
-.label_input {
-  font-size: 15px;
-  line-height: 1.5;
-  padding-left: 5px;
-  color: #afafaf;
-  font-weight: 800;
-  font-family: Raleway;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.input {
-  display: block;
-  width: 100%;
-  background: transparent;
-  font-size: 18px;
-  color: #EEEEEE;
-  line-height: 1.2;
-  padding: 0 5px;
-  font-weight: 500;
-}
-
-.input:focus + .label_input {
-  background: red!important;
-}
-
-input.input {
-  height: 40px;
-  font-family: Raleway!important;
-}
-
-
-textarea.input {
-  min-height: 110px;
-  padding-top: 9px;
-  padding-bottom: 13px;
-  font-family: Raleway;
-  width: 100%!important;
-}
-
-.input:-webkit-autofill {
-  color: #ffffff!important;
-  -webkit-text-fill-color: #f5fff5;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.container_contact_form_btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.contact_form_btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -moz-box;
-  -moz-box-pack: center;
-  justify-content: center;
-  -moz-box-align: center;
-  align-items: center;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 800;
-  font-family: Raleway;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 15px;
-  width: fit-content;
-  padding: 20px 36px;
-  border: 2px solid #ffffff;
-}
-
-.contact_form_btn:hover {
-}
-
-@media (max-width: 768px) {
-  .rs1_wrap_input {
-    width: 100%;
-  }
-}
-
-.validate_input {
-  position: relative;
 }
