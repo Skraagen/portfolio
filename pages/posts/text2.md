@@ -1,5 +1,6 @@
 ---
 title: HCFPVP
+thumb: /img/3.png
 image: /img/3.png
 featured: true
 ---

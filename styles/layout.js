@@ -33,7 +33,7 @@ export const Column = styled.div `
   }
 
   @media ${({ theme }) => theme.bp.sm} {
-    flex-basis: 50%;
+    flex-basis: ${props => props.small ? "50%" : "100%"};
   }
 `
 

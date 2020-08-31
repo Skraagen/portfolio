@@ -1,5 +1,6 @@
 ---
 title: Miniga.me
+thumb: /img/1.png
 image: /img/1.png
 featured: true
 ---

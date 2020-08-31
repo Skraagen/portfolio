@@ -13,6 +13,7 @@ export default function PostLayout(props){
     <Head>
       <title>{props.title}</title>
     </Head>
+    <PostNav type="post" />
     <Section>
       <Container>
         <Title>{props.title}</Title>
@@ -22,7 +23,6 @@ export default function PostLayout(props){
         </Paragraph>
       </Container>
     </Section>
-    <PostNav type="post" />
   </>
   )
 }

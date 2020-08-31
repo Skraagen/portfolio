@@ -1,6 +1,7 @@
 ---
 title: Classic Realms
-image: /img/classicrealms.png
-featured: false
+thumb: /img/classicrealms2.png
+image: /img/classicrealms2.png
+featured: true
 ---
 Classic Realms study

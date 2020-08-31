@@ -18,9 +18,9 @@ export default function Home(props) {
         <title>Skraagen Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <PostNav type="all" />
       <Section>
         <Container>
-          <Title>My portfolio</Title>
           <Grid left>
             {props.posts.map(function(post, idx){
               return (
@@ -36,7 +36,6 @@ export default function Home(props) {
           </Grid>
         </Container>
       </Section>
-      <PostNav type="all" />
     </>
   )
 }
