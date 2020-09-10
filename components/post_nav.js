@@ -28,11 +28,18 @@ const Control = styled.div `
   padding: 20px 36px 20px;
   margin-top: 30px;
   transition: all .2s ease-out;
-  flex-basis: 33.3333%;
+  flex-basis: 50%;
   text-align: center;
+  transition: all .2s ease-out;
+
+  @media ${({ theme }) => theme.bp.xs} {
+    color: transparent;
+    font-size: 1px;
+  }
 
   &:hover {
     cursor: pointer;
+    opacity: 0.6;
   }
 `
 
@@ -41,18 +48,13 @@ const ForwardControl = styled(Control) `
   text-align: right;
 
   &:after {
-    content: url(/icons/arrow-forward-outline.svg);
+    content: url(/icons/grid.svg);
     width: 26px;
     float: right;
     margin-top: -5px;
     margin-left: 18px;
     margin-right: -8px;
-    transition: all .2s ease-out;
-  }
-
-  &:hover:after {
-    transform: translate(3px, 0);
-    margin-left: 27px;
+    filter: invert(1);
   }
 `
 
@@ -61,18 +63,13 @@ const BackControl = styled(Control) `
   text-align: left;
 
   &:before {
-    content: url(/icons/arrow-back-outline.svg);
+    content: url(/icons/home.svg);
     width: 26px;
     float: left;
     margin-top: -5px;
     margin-right: 18px;
     margin-left: -8px;
-    transition: all .2s ease-out;
-  }
-
-  &:hover:before {
-    transform: translate(-3px, 0);
-    margin-right: 27px;
+    filter: invert(1);
   }
 `
 
@@ -84,8 +81,7 @@ export default function PostNav(props) {
         <Container center>
           <Controls>
             <Link scroll={false} href="/#fromPosts"><BackControl>Return home</BackControl></Link>
-            <Link scroll={false} href="/posts"><Control>All projects</Control></Link>
-            <ForwardControl>Next project</ForwardControl>
+            <Link scroll={false} href="/posts"><ForwardControl>All projects</ForwardControl></Link>
           </Controls>
         </Container>
       </Wrapper>

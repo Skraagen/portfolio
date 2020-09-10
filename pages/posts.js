@@ -29,7 +29,6 @@ export default function Home(props) {
                 <Link href={'/posts/'+post.slug}>
                   <Column small>
                     <Card small key={idx} style={{backgroundImage: "url(" + post.image + ")"}}>
-                      <h3>{post.title}</h3>
                     </Card>
                   </Column>
                 </Link>

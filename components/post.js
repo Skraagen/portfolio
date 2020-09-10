@@ -34,6 +34,13 @@ const Hero = styled.div `
   }
 `
 
+const PostSection = styled(Section) `
+  & img {
+    width: 100%;
+    margin-top: 30px;
+  }
+`
+
 export default function PostLayout(props){
   return (
   <Page loader={"bubble"} color={"#A9A9A9"} size={4}>
@@ -43,17 +50,18 @@ export default function PostLayout(props){
       <PostNav type="post" />
     <Fade>
       <Hero background={props.image}>
-        <img style={{height: "350px", "object-fit": "contain", margin: "auto 0"}} src={props.image} />
+        <img style={{height: "350px", "object-fit": "contain", margin: "auto 0", "max-width": "100%"}} src={props.image} />
       </Hero>
     </Fade>
-    <Section>
+    <PostSection>
       <Container>
         <Title>{props.title}</Title>
+        <Paragraph>{props.date}</Paragraph>
         <Paragraph>
           <div dangerouslySetInnerHTML={{__html:props.content}}/>
         </Paragraph>
       </Container>
-    </Section>
+    </PostSection>
     <Footer></Footer>
   </Page>
   )

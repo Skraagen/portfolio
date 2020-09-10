@@ -2,7 +2,7 @@ import PostLayout from '@components/post'
 import { getPostBySlug, getAllPosts } from "@api/index"
 
 export default function Post(props){
-    return <PostLayout title={props.title} image={props.image} content={props.content}/>
+    return <PostLayout title={props.title} date={props.date} image={props.image} content={props.content}/>
 }
 
 export async function getStaticProps(context){

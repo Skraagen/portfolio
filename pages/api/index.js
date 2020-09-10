@@ -43,6 +43,7 @@ export async function getPostBySlug(slug){
     return {
         title: meta.data.title,
         image: meta.data.image,
+        date: meta.data.date,
         content: content
     }
 }

@@ -61,24 +61,26 @@ export default function Home(props) {
       </Head>
 
       <Section key="home" ref={refs['home']} id={styles.hero}>
-        <div id={styles.hero_inner}>
-            <HeroFigure></HeroFigure>
-            <img src="/logo.png" className={styles.logo} />
-        </div>
-          <nav>
-            <Fade top cascade>
+        <Fade>
+          <div id={styles.hero_inner}>
+              <HeroFigure></HeroFigure>
+              <img src="/logo.png" className={styles.logo} />
+          </div>
+        </Fade>
+        <nav>
+          <Fade top cascade>
             <ul>
               <li key="contact"><a onClick={() => handleClick("contact")}>Contact</a></li>
               <li key="about"><a onClick={() => handleClick("about")}>About me</a></li>
               <li key="portfolio"><a onClick={() => handleClick("portfolio")}>My work</a></li>
               <li key="home"><a onClick={() => handleClick("home")}>Home</a></li>
             </ul>
-            </Fade>
-          </nav>
+          </Fade>
+        </nav>
 
-          <a onClick={() => handleClick("portfolio")} id={styles.hero_description}>
-            <img src="icons/arrow-down-outline.svg" alt="Down-arrow" />
-          </a>
+        <a onClick={() => handleClick("portfolio")} id={styles.hero_description}>
+          <img src="icons/arrow-down-outline.svg" alt="Down-arrow" />
+        </a>
       </Section>
 
       <Section key="portfolio" ref={refs['portfolio']} id="fromPosts">
@@ -111,7 +113,6 @@ export default function Home(props) {
             <div className={styles.about_text}>
               <Title>About me</Title>
               <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non fringilla mauris. Aliquam dapibus mauris eget lacus iaculis commodo vitae ut lorem. Donec posuere porttitor diam, pretium consequat lectus lobortis a. Donec pharetra nibh at feugiat vulputate. Nulla scelerisque ipsum quis ipsum blandit vulputate.</Paragraph>
-              <ForwardButton>My Story</ForwardButton>
             </div>
             </Fade>
             <Fade bottom>
