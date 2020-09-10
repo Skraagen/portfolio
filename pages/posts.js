@@ -9,11 +9,12 @@ import { getConfig, getAllPosts } from '@api/index'
 import Router from 'next/router'
 import PostNav from '@components/post_nav'
 import Fade from "react-reveal"
+import Page from 'react-page-loading'
 
 
 export default function Home(props) {
   return (
-    <>
+    <Page loader={"bubble"} color={"#A9A9A9"} size={4}>
       <Head>
         <title>Skraagen Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -39,7 +40,7 @@ export default function Home(props) {
         </Container>
       </Section>
       <Footer></Footer>
-    </>
+    </Page>
   )
 }
 

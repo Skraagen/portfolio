@@ -14,6 +14,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import useWindowSize from "@api/window"
 import Fade from "react-reveal"
+import Page from 'react-page-loading'
 
 const sections = [{id: 'home', title: 'Home'}, {id: 'portfolio', title: 'Portfolio'}, {id:'about', title: 'About me'}, {id:'contact', title: 'Contact'}];
 
@@ -31,6 +32,7 @@ const handleClick = id =>
 const width = 0;
 
 export default function Home(props) {
+
   const {windowHeight} = useWindowSize();
 
   const ParallaxTitle = ({ src, }, prop) => {
@@ -52,7 +54,7 @@ export default function Home(props) {
   };
 
   return (
-    <>
+    <Page loader={"bubble"} color={"#A9A9A9"} size={4}>
       <Head>
         <title>Skraagen Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -130,7 +132,7 @@ export default function Home(props) {
       </Section>
 
       <Footer></Footer>
-    </>
+    </Page>
   )
 }
 

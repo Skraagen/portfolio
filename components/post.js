@@ -8,6 +8,7 @@ import { Title, Paragraph } from '@styles/content'
 import { BackButton } from '@styles/components'
 import styled from "styled-components"
 import Fade from "react-reveal"
+import Page from 'react-page-loading'
 
 const Hero = styled.div `
   width: 100%;
@@ -35,7 +36,7 @@ const Hero = styled.div `
 
 export default function PostLayout(props){
   return (
-  <>
+  <Page loader={"bubble"} color={"#A9A9A9"} size={4}>
     <Head>
       <title>{props.title}</title>
     </Head>
@@ -54,6 +55,6 @@ export default function PostLayout(props){
       </Container>
     </Section>
     <Footer></Footer>
-  </>
+  </Page>
   )
 }
