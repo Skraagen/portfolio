@@ -8,7 +8,7 @@ import { Title, Paragraph } from '@styles/content.js'
 import { getConfig, getAllPosts } from '@api/index'
 import Router from 'next/router'
 import PostNav from '@components/post_nav'
-
+import Fade from "react-reveal"
 
 
 export default function Home(props) {
@@ -21,6 +21,7 @@ export default function Home(props) {
       <PostNav type="all" />
       <Section>
         <Container>
+        <Fade>
           <Grid left>
             {props.posts.map(function(post, idx){
               return (
@@ -34,8 +35,10 @@ export default function Home(props) {
               )
             })}
           </Grid>
+          </Fade>
         </Container>
       </Section>
+      <Footer></Footer>
     </>
   )
 }
