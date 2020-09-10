@@ -3,7 +3,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: #181818;
+  background: rgb(20 20 20);
   //background-image: url('/hero-bg.png');
   background-size: cover;
   padding: 0;
