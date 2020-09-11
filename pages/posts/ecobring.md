@@ -6,5 +6,5 @@ date: 25 / 11 / 2019
 featured: true
 ---
 
-![alt text](/img/ecobring_profile.png "Overview of the Ecobring brand")
-![alt text](/img/ecobring_preview.png "Ecobring logo on website mockup")
+![Overview of the Ecobring brand](/img/ecobring_profile.png "Overview of the Ecobring brand")
+![Ecobring logo on website mockup](/img/ecobring_preview.png "Ecobring logo on website mockup")

@@ -112,7 +112,12 @@ export default function Home(props) {
             <Fade left>
             <div className={styles.about_text}>
               <Title>About me</Title>
-              <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non fringilla mauris. Aliquam dapibus mauris eget lacus iaculis commodo vitae ut lorem. Donec posuere porttitor diam, pretium consequat lectus lobortis a. Donec pharetra nibh at feugiat vulputate. Nulla scelerisque ipsum quis ipsum blandit vulputate.</Paragraph>
+              <Paragraph>
+                I'm a 19-year-old digital enthusiast that strives for perfection. I've loved creating things and finding functional solutions my whole life. My graphic design adventure began when I was 10 years old, starting to create logos and designs for Minecraft communities in Photoshop. Since then I have ventured into other mediums, such as website design, programming, sound production and more.
+              </Paragraph>
+              <Paragraph>
+                I love to improve and learn new things. My strongest skillset currently consists of branding, digital marketing, webdevelopment and graphic design.
+              </Paragraph>
             </div>
             </Fade>
             <Fade bottom>
@@ -126,8 +131,19 @@ export default function Home(props) {
 
       <Section key="contact" ref={refs['contact']}>
         <Container>
-          <Grid>
-            <ContactForm />
+          <Grid style={{textAlign: 'center'}}>
+            <Fade left>
+            <div className={styles.about_text}>
+              <Title>Contact me</Title>
+              <Paragraph>
+                Do you have an idea that you want to realize? Do you need help creating a solid brand? Feel free to send me an email about any enquiries.
+              </Paragraph>
+              <Paragraph>
+                E-Mail: <a href="mailto: skraagen@hotmail.com">skraagen@hotmail.com</a>
+              <br />Location: Trondheim, Norway
+              </Paragraph>
+            </div>
+          </Fade>
           </Grid>
         </Container>
       </Section>

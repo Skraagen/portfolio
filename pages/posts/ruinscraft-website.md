@@ -10,6 +10,6 @@ Redesign of the Ruinscraft forums. Not yet released.
 
 View of the new store with tailored icons:
 
-![alt text](/img/ruinscraft_store.png "Screenshot of the new Ruinscraft store with shopicons")
+![Screenshot of the new Ruinscraft store with shopicons](/img/ruinscraft__store.png "Screenshot of the new Ruinscraft store with shopicons")
 
 [Click here to go to the website](https://store.ruinscraft.com/)
